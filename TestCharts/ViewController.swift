@@ -43,9 +43,11 @@ class ViewController: UIViewController {
 		xAxis.axisMinimum = startTime.timeIntervalSince1970
 		xAxis.axisMaximum = endTime.timeIntervalSince1970
 		xAxis.labelPosition = .bottom
-		xAxis.granularity = 3600
+//		xAxis.granularity = 10
 		
-		chart.setVisibleXRange(minXRange: 5 * 3600, maxXRange: 5 * 3600)
+		chart.extraBottomOffset = 20
+		
+		chart.setVisibleXRange(minXRange: 1 * 3600, maxXRange: 1 * 3600)
 	}
 	
 	private func setupChartData() {
@@ -54,17 +56,21 @@ class ViewController: UIViewController {
 		let startTime: Date = Calendar.current.date(from: Calendar.current.dateComponents([.year, .month, .day], from: today)) ?? today
 		
 		
-		for i in 0..<1000 {
+		for i in 0..<20 {
 			let value = arc4random_uniform(400)
 			if value != 0 {
-				let dataEntry = ChartDataEntry(x: Double(i) + startTime.timeIntervalSince1970, y: Double(value))
+				let dataEntry = ChartDataEntry(x: (Double(i) * 100) + startTime.timeIntervalSince1970, y: Double(value))
 				dataEntries.append(dataEntry)
 			}
 			
 		}
-		let dataSet = LineChartDataSet(entries: dataEntries, label: "")
+		let dataSet = LineChartDataSet(entries: dataEntries, label: "test")
+		dataSet.drawCirclesEnabled = false
 		let data = LineChartData(dataSet: dataSet)
 		chart.data = data
+		
+		let marker = CircleMarker(color: .red)
+		chart.marker = marker
 	}
 }
 
