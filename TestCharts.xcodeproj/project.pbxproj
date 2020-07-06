@@ -15,6 +15,7 @@
 		D56D1FDF24B31D6900272B8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D56D1FDE24B31D6900272B8C /* Assets.xcassets */; };
 		D56D1FE224B31D6900272B8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D56D1FE024B31D6900272B8C /* LaunchScreen.storyboard */; };
 		D587237124B3216B0019C3D7 /* CustomValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D587237024B3216B0019C3D7 /* CustomValueFormatter.swift */; };
+		D587237324B3489C0019C3D7 /* TimeValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D587237224B3489C0019C3D7 /* TimeValueFormatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		D56D1FE124B31D6900272B8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D56D1FE324B31D6900272B8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D587237024B3216B0019C3D7 /* CustomValueFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomValueFormatter.swift; sourceTree = "<group>"; };
+		D587237224B3489C0019C3D7 /* TimeValueFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeValueFormatter.swift; sourceTree = "<group>"; };
 		E36660036085EDF84DE5809B /* Pods-TestCharts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestCharts.release.xcconfig"; path = "Target Support Files/Pods-TestCharts/Pods-TestCharts.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,6 +79,7 @@
 				D56D1FD724B31D5E00272B8C /* SceneDelegate.swift */,
 				D56D1FD924B31D5E00272B8C /* ViewController.swift */,
 				D587237024B3216B0019C3D7 /* CustomValueFormatter.swift */,
+				D587237224B3489C0019C3D7 /* TimeValueFormatter.swift */,
 				D56D1FDB24B31D5E00272B8C /* Main.storyboard */,
 				D56D1FDE24B31D6900272B8C /* Assets.xcassets */,
 				D56D1FE024B31D6900272B8C /* LaunchScreen.storyboard */,
@@ -211,6 +214,7 @@
 			files = (
 				D56D1FDA24B31D5E00272B8C /* ViewController.swift in Sources */,
 				D587237124B3216B0019C3D7 /* CustomValueFormatter.swift in Sources */,
+				D587237324B3489C0019C3D7 /* TimeValueFormatter.swift in Sources */,
 				D56D1FD624B31D5E00272B8C /* AppDelegate.swift in Sources */,
 				D56D1FD824B31D5E00272B8C /* SceneDelegate.swift in Sources */,
 			);

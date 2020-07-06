@@ -13,6 +13,9 @@ class ViewController: UIViewController {
 	
 	@IBOutlet weak var chart: LineChartView!
 	
+	
+	let today = Date()
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view.
@@ -23,32 +26,38 @@ class ViewController: UIViewController {
 	private func setupChart() {
 		let leftAxis = chart.leftAxis
 		leftAxis.axisMinimum = -10
-		leftAxis.axisMaximum = 100
-		leftAxis.granularity = 20
-		leftAxis.drawGridLinesEnabled = false
+		leftAxis.axisMaximum = 400
+		leftAxis.granularity = 100
 		
 		let rightAxis = chart.rightAxis
 		rightAxis.enabled = false
 		
-		let xAxis = chart.xAxis
-		xAxis.valueFormatter = CustomValueFormatter()
-		xAxis.axisMinimum = 0
-		xAxis.axisMaximum = 13
-		xAxis.labelPosition = .bottom
-		xAxis.granularity = 1
-		xAxis.drawGridLinesEnabled = false
+		let startTime: Date = Calendar.current.date(from: Calendar.current.dateComponents([.year, .month, .day], from: today)) ?? today
 		
-		chart.setVisibleXRange(minXRange: 5, maxXRange: 5)
+		var dayComponent = DateComponents()
+		dayComponent.day = 1
+		let endTime: Date = Calendar.current.date(byAdding: dayComponent, to: startTime) ?? today
+		
+		let xAxis = chart.xAxis
+		xAxis.valueFormatter = TimeValueFormatter()
+		xAxis.axisMinimum = startTime.timeIntervalSince1970
+		xAxis.axisMaximum = endTime.timeIntervalSince1970
+		xAxis.labelPosition = .bottom
+		xAxis.granularity = 3600
+		
+		chart.setVisibleXRange(minXRange: 5 * 3600, maxXRange: 5 * 3600)
 	}
 	
 	private func setupChartData() {
 		var dataEntries: [ChartDataEntry] = []
 		
-		let forY: [Double] = [80, 70, 0 ,0 ,0]
+		let startTime: Date = Calendar.current.date(from: Calendar.current.dateComponents([.year, .month, .day], from: today)) ?? today
 		
-		for i in 0..<forY.count {
-			if forY[i] != 0 {
-				let dataEntry = ChartDataEntry(x: Double(i+1), y: forY[i])
+		
+		for i in 0..<1000 {
+			let value = arc4random_uniform(400)
+			if value != 0 {
+				let dataEntry = ChartDataEntry(x: Double(i) + startTime.timeIntervalSince1970, y: Double(value))
 				dataEntries.append(dataEntry)
 			}
 			
