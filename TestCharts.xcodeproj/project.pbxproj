@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8EF14AC611F0CBD5C286F463 /* Pods_TestCharts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA4C2592FA2EDC17F1D0D3FD /* Pods_TestCharts.framework */; };
+		D51EC5C524C5B7B800E6E7E3 /* CustomPieValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51EC5C424C5B7B800E6E7E3 /* CustomPieValueFormatter.swift */; };
 		D56D1FD624B31D5E00272B8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56D1FD524B31D5E00272B8C /* AppDelegate.swift */; };
 		D56D1FD824B31D5E00272B8C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56D1FD724B31D5E00272B8C /* SceneDelegate.swift */; };
 		D56D1FDA24B31D5E00272B8C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56D1FD924B31D5E00272B8C /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		CA4C2592FA2EDC17F1D0D3FD /* Pods_TestCharts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestCharts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAE9755700184958D6356161 /* Pods-TestCharts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestCharts.debug.xcconfig"; path = "Target Support Files/Pods-TestCharts/Pods-TestCharts.debug.xcconfig"; sourceTree = "<group>"; };
+		D51EC5C424C5B7B800E6E7E3 /* CustomPieValueFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPieValueFormatter.swift; sourceTree = "<group>"; };
 		D56D1FD224B31D5E00272B8C /* TestCharts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestCharts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D56D1FD524B31D5E00272B8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D56D1FD724B31D5E00272B8C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 				D56D1FD724B31D5E00272B8C /* SceneDelegate.swift */,
 				D56D1FD924B31D5E00272B8C /* ViewController.swift */,
 				D587237024B3216B0019C3D7 /* CustomValueFormatter.swift */,
+				D51EC5C424C5B7B800E6E7E3 /* CustomPieValueFormatter.swift */,
 				D56D1FDB24B31D5E00272B8C /* Main.storyboard */,
 				D56D1FDE24B31D6900272B8C /* Assets.xcassets */,
 				D56D1FE024B31D6900272B8C /* LaunchScreen.storyboard */,
@@ -213,6 +216,7 @@
 				D587237124B3216B0019C3D7 /* CustomValueFormatter.swift in Sources */,
 				D56D1FD624B31D5E00272B8C /* AppDelegate.swift in Sources */,
 				D56D1FD824B31D5E00272B8C /* SceneDelegate.swift in Sources */,
+				D51EC5C524C5B7B800E6E7E3 /* CustomPieValueFormatter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
